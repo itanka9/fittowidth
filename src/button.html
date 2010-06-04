@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script>
+      chrome.browserAction.onClicked.addListener(
+	 function(tab) {
+	    chrome.tabs.connect(tab.id).
+		  postMessage({cmd: 'toggle'});
+	 })
+
+      chrome.extension.onConnect.addListener(function(port) {
+	 port.onMessage.addListener(function(msg) {
+	    if (msg.cmd == "status") {
+	       chrome.browserAction.setIcon({
+		  path: msg.fit ? 'fitted.png' : 'default.png',
+		  tabId: port.sender.tab.id})
+	    }
+	 })
+      })
+    </script>
+  </head>
+</html>

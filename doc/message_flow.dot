@@ -1,0 +1,10 @@
+digraph G {
+      2 [label="Tab Content script"];
+      1 [label="Background page"];
+      5 [label="Tab Browser Action"];
+      1 -> 2 [label = "toggle pm"];
+      2 -> 1 [label = "status pm"];
+      1 -> 5 [label = "setIcon"];
+      5 -> 1 [label = "onClick"];
+      2 -> 2 [label = "Hotkeys handler"]
+      }	
