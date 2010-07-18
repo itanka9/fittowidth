@@ -55,7 +55,7 @@
       port.onMessage.addListener(processMessage);
    });
 
-   if (isFit == 'false')
+   if (isFit == 'false' || !isFit)
       isFit = false
    applyFit();
 
