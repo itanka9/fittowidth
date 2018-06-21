@@ -1,10 +1,10 @@
 (function () {
 
-    SCROLLBAR_ADJUST = 16
+    var SCROLLBAR_ADJUST = 16
 
     var isFit = localStorage.getItem('fitToWidth32764')
 
-    /* For */
+    /* For correct PRE element wrapping */
     var preWrapObj
 
     function addPreWrapCSS() {
@@ -72,11 +72,9 @@
 
     window.addEventListener('resize', applyFit) 
 
-
     chrome.runtime.onMessage.addListener(processMessage)
     
     if (isFit == 'false' || !isFit)
         isFit = false
     applyFit();
-
 })()
