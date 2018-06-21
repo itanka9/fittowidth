@@ -1,8 +1,12 @@
 {
   "name": "Fit to width",
-  "version": "0.9.4",
+  "version": "0.9.5",
+  "manifest_version": 2,
   "description": "Trys to remove horisontal scrollbar by fitting web-page into browser window.",
-  "background_page": "button.html",
+  "background": {
+    "scripts": ["button.js"],
+    "persistent": false
+  },
   "icons" : { 
      "16": "fav16.png",
      "48": "fav48.png",

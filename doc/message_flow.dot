@@ -7,4 +7,4 @@ digraph G {
       1 -> 5 [label = "setIcon"];
       5 -> 1 [label = "onClick"];
       2 -> 2 [label = "Hotkeys handler"]
-      }	
+}	
